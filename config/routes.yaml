@@ -1,0 +1,15 @@
+index:
+    path: /
+    controller: App\Controller\TestController::index
+test:
+  path: /test
+  controller: App\Controller\TestController::test
+identification:
+  path: /identification/{nom}/{prenom}/{age}
+  controller: App\Controller\TestController::identification
+  defaults:
+    nom: "paul"
+    prenom: "henri"
+    age: 20
+  requirements:
+    age: \d+
